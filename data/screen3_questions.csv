@@ -1,0 +1,11 @@
+﻿type;title;selectbox;selectbox;selectbox;selectbox
+key;;proposito;modo_PR;origen;destino
+label;Características del Viaje;¿Cuál es el Propósito de su viaje?;¿En modo de transporte realiza su viaje?;¿Cuál es el origen de su viaje?;¿Cuál es el destino de su viaje?
+label2;;;;Indique la comuna donde empieza su viaje;Indique la comuna donde termina su viaje
+opcion_1;;Trabajo;Auto Particular;Villarrica;Villarrica
+opcion_2;;Estudio;Bus;Pucón;Pucón
+opcion_3;;Otro;;Temuco;Temuco
+opcion_4;;;;Loncoche;Loncoche
+opcion_5;;;;Otra;Otra
+opcion_6;;;;;
+opcion_7;;;;;

@@ -1,0 +1,12 @@
+﻿type;title;text;text;text;text
+key;;parrafo1;parrafo2;parrafo3;parrafo4
+label;Introducción PD;Para las siguientes preguntas le pedimos que suponga que debe repetir el mismo viaje que está realizando en este momento y que considere que tiene dos opciones disponibles que ofrecen tiempos y costo distintos.;Las alternativas serán descritas mediante una tabla del siguiente estilo;Analice ambas opciones y en cada caso seleccione la que usted cree que usaría para realizar un viaje con el mismo origen, destino, horario del día y propósito al que está realizando ahora;La encuesta es totalmente anónima y no hay respuestas correctas o incorrectas.
+label2;;;;;
+opcion_1;;;;;
+opcion_2;;;;;
+opcion_3;;;;;
+opcion_4;;;;;
+opcion_5;;;;;
+opcion_6;;;;;
+opcion_7;;;;;
+opcion_8;;;;;
