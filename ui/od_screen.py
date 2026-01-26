@@ -5,7 +5,6 @@ from streamlit_geolocation import streamlit_geolocation
 import folium
 from streamlit_folium import st_folium
 
-from src.geocoding import georreferenciar
 
 def get_surveyor_location():
 
