@@ -183,11 +183,8 @@ if st.session_state["screen15_completed"]:
 
 st.divider()
 
-st.write(st.session_state["responses"])
+#st.write(st.session_state["responses"])
 
-
-
-
-if "choice_set_df" in st.session_state:
-        st.write(st.session_state["choice_set_df"])
-        st.write(st.session_state["choice_set_df_differences"])
+#if "choice_set_df" in st.session_state:
+#        st.write(st.session_state["choice_set_df"])
+#        st.write(st.session_state["choice_set_df_differences"])
