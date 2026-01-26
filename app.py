@@ -3,7 +3,6 @@ import streamlit as st
 from src.time_utils import process_time_list, record_datetime
 from src.database import send_to_database
 from src.pd_utils import generate_choice_set_df, compute_differences
-from src.api_nivels import save_api_nivels
 import random
 
 import ui.general_screen as gs
