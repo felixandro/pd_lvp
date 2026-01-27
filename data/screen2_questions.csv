@@ -1,11 +1,11 @@
-﻿type;title;selectbox;number_input
-key;;genero;edad
-label;Características del Usuario;¿Cuál es su Género?;¿Cuál es su Edad?
-label2;;;
-opcion_1;;Femenino;14
-opcion_2;;Masculino;100
-opcion_3;;;
-opcion_4;;;
-opcion_5;;;
-opcion_6;;;
-opcion_7;;;
+﻿type;title;selectbox;number_input;selectbox
+key;;genero;edad;licencia
+label;Características del Usuario;¿Cuál es su Género?;¿Cuál es su Edad?;¿Posee licencia de conducir?
+label2;;;;
+opcion_1;;Femenino;14;Sí
+opcion_2;;Masculino;100;No
+opcion_3;;;;
+opcion_4;;;;
+opcion_5;;;;
+opcion_6;;;;
+opcion_7;;;;

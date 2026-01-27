@@ -1,11 +1,11 @@
-﻿type;title;selectbox;number_input;number_input;number_input;selectbox;number_input
-key;;ma_bus_PR;ta_bus_PR;tv_bus_PR;c_bus_PR;me_bus_PR;te_bus_PR
-label;Viaje en Bus;¿En que modo de transporte llega al terminal?;¿Cuántos minutos se demora en llegar al terminal?;¿Cuánto demora su viaje en Bus?;¿Cuánto paga por el pasaje en Bus?;Una vez baja del bus ¿En que modo de transporte llega a su destino?;Una vez baja del Bus ¿Cuánto de demora en llegar a su destino definitivo?
-label2;;;Minutos desde su origen hasta el terminal;Minutos de viaje a bordo del bus;Tarifa en pesos;;Minutos desde que baja del bus hasta su detino definitivo
-opcion_1;;Auto de un pariente o amigo;1;1;0;Auto de un pariente o amigo;1
-opcion_2;;Transporte Público (Taxibus o Taxicolectivo);60;240;20000;Transporte Público (Taxibus o Taxicolectivo);60
-opcion_3;;Caminando;;;;Caminando;
-opcion_4;;App de Viajes (Uber, Didi, Cabify);;;;App de Viajes (Uber, Didi, Cabify);
-opcion_5;;Otro;;;;Otro;
-opcion_6;;;;;;;
-opcion_7;;;;;;;
+﻿type;title;selectbox;number_input;number_input;number_input;selectbox;number_input;selectbox;selectbox
+key;;ma_bus_PR;ta_bus_PR;tv_bus_PR;c_bus_PR;me_bus_PR;te_bus_PR;asiento;disp_auto
+label;Viaje en Bus;¿En que modo de transporte llega al terminal?;¿Cuántos minutos se demora en llegar al terminal?;¿Cuánto demora su viaje en Bus?;¿Cuánto paga por el pasaje en Bus?;Una vez baja del bus ¿En que modo de transporte llega a su destino?;Una vez baja del Bus ¿Cuánto de demora en llegar a su destino?;¿En qué tipo de servicio de Bus viaja?;¿Contaba con un auto disponible para haber realizado este viaje?
+label2;;;Minutos desde su origen hasta el terminal;Minutos de viaje a bordo del bus;Tarifa en pesos;;Minutos desde que baja del bus hasta su detino;;
+opcion_1;;Auto de un pariente o amigo;1;1;0;Auto de un pariente o amigo;1;Asiento Clásico o Semi-Cama;Sí
+opcion_2;;Transporte Público (Taxibus o Taxicolectivo);60;240;20000;Transporte Público (Taxibus o Taxicolectivo);60;Salón Cama o Premium;No
+opcion_3;;Caminando;;;;Caminando;;;
+opcion_4;;App de Viajes (Uber, Didi, Cabify);;;;App de Viajes (Uber, Didi, Cabify);;;
+opcion_5;;Otro;;;;Otro;;;
+opcion_6;;;;;;;;;
+opcion_7;;;;;;;;;

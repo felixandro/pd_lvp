@@ -1,7 +1,7 @@
 ﻿type;title;number_input;number_input;number_input
 key;;tv_liv_PR;cb_liv_PR;cp_liv_PR
-label;Viaje en Auto;¿Cuánto dura su viaje en Auto?;¿Cuánto gasta en bencina para realizar este viaje?;¿Cuánto gasta en peajes?
-label2;;Minutos de viaje desde que sube al Auto hasta que baja de este;Gasto aproximado en estacionamiento y combustible;Gasto aproximado en estacionamiento y combustible
+label;Viaje en Auto;¿Cuánto dura el viaje en Auto?;¿Cuánto gasta en bencina para realizar este viaje?;¿Cuánto gasta en peajes?
+label2;;Minutos de viaje desde que sube al Auto hasta que baja de este;Indique un valor en pesos;Indique un valor en pesos
 opcion_1;;20;0;0
 opcion_2;;200;100000;20000
 opcion_3;;;;

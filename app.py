@@ -60,6 +60,7 @@ if "screen6_completed" not in st.session_state:
 # Order PD Choice Sets: Orden Tarjetas PD
 if "order_pd_choice_sets" not in st.session_state:
     st.session_state["order_pd_choice_sets"] = random.sample(range(1, 9), 8)
+    st.session_state["count_pd"] = 0
 
 # Screen5: Categoría de Usuario
 if "screen15_completed" not in st.session_state:
@@ -124,7 +125,10 @@ screen_5x_completed = any([
 
 if st.session_state["od_screen_completed"] and not screen_5x_completed:
 
-    #save_api_nivels() # Se consultan y guardan los niveles de servicio vía API Directions de Google
+    if "choice_set_df" not in st.session_state:
+        st.session_state["choice_set_df"] = generate_choice_set_df(nro_disenho=1)
+        #st.session_state["choice_set_df_differences"] = compute_differences(st.session_state["choice_set_df"])
+
 
     modo_PR = st.session_state["responses"]["screen3"].get("modo_PR", False)
 
@@ -151,11 +155,9 @@ if st.session_state["screen6_completed"] and len(st.session_state["order_pd_choi
     
     pds.initialize_pd_responses()
 
-    if "choice_set_df" not in st.session_state:
-        st.session_state["choice_set_df"] = generate_choice_set_df(nro_disenho=1)
-        #st.session_state["choice_set_df_differences"] = compute_differences(st.session_state["choice_set_df"])
-
-    pds.generate_pd_screen(st.session_state["order_pd_choice_sets"][0])
+    st.session_state["count_pd"] += 1
+    count_pd = st.session_state["count_pd"]
+    pds.generate_pd_screen(st.session_state["order_pd_choice_sets"][0], count_pd)
 
 # --------------------------------------------------
 # Screen 15 // General Screen // Categoría de Usuario
@@ -182,7 +184,7 @@ if st.session_state["screen15_completed"]:
 
 st.divider()
 
-#st.write(st.session_state["responses"])
+st.write(st.session_state["responses"])
 
 #if "choice_set_df" in st.session_state:
 #        st.write(st.session_state["choice_set_df"])

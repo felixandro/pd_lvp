@@ -133,6 +133,8 @@ def perfil_eleccion(niveles_a, niveles_b):
 
     # Filas de datos
     for i in range(len(index)):
+        if niveles_a[i+1] == 0 and niveles_b[i+1] == 0:
+            continue  # Saltar fila si ambos niveles son cero):
         if i == 0:
             # Formatear los valores de costo con separador de miles y signo $
             try:
@@ -219,8 +221,45 @@ def next_pd_button(id_pd_card):
         on_click=set_true_state_variable
     )
 
-def generate_pd_screen(id_pd_card):
-    st.title(f"PD {id_pd_card}")
+def generate_enunciado_pd(responses):
+
+    origen = responses["screen3"]["origen"] 
+    destino = responses["screen3"]["destino"]
+    proposito = responses["screen3"]["proposito"]
+
+    origen = origen if origen != "Aeropuerto" else "el Aeropuerto"
+    destino = destino if destino != "Aeropuerto" else "el Aeropuerto"
+
+
+    enunciado = f"""
+    <div style="
+        font-size: 20px;
+        margin-bottom: 1rem;
+        text-align: center;
+    ">
+        Supón que debes viajar <span style="color: #000000; font-weight: bold;"> solo </span> (sin acompañantes) desde <span style="color: #000000; font-weight: bold;">{origen}</span> hasta <span style="color: #000000; font-weight: bold;">{destino}</span>
+        por motivos de <span style="color: #000000; font-weight: bold;">{proposito}</span> y que será financiado por ti mismo.
+    </div>
+    """
+    enunciado2 = f"""
+    <div style="
+        font-size: 20px;
+        margin-bottom: 1rem;
+        text-align: center;
+    ">
+        Si tus alternativas disponibles fueran las siguientes ¿Cuál elegirías para realizar el viaje?
+    </div>
+    """
+
+    st.markdown(enunciado, unsafe_allow_html=True)
+    st.markdown(enunciado2, unsafe_allow_html=True)
+
+def generate_pd_screen(id_pd_card, count_pd):
+    
+    #st.title(f"PD {id_pd_card}")
+    st.title(f"Pregunta {count_pd}")
+
+    generate_enunciado_pd(st.session_state["responses"])
 
     # Perfil de Elección
     niveles_a, niveles_b = get_nivels(id_pd_card)
@@ -242,4 +281,4 @@ def generate_pd_screen(id_pd_card):
 
         # Next PD Button
         next_pd_button(id_pd_card)
-    
+

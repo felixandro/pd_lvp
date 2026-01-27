@@ -1,11 +1,11 @@
 ﻿type;title;selectbox;selectbox
 key;;id_encuestador;pc
-label;Encuestador y Lugar de Encuesta;Encuestador;Punto de Control
+label;Encuestador y Lugar de Encuesta;Encuestador;Lugar de Encuesta
 label2;;;
-opcion_1;;Encuestador1;PC01
-opcion_2;;Encuestador2;PC02
-opcion_3;;Encuestador3;PC03
-opcion_4;;Encuestador4;
+opcion_1;;Encuestador1;Terminal
+opcion_2;;Encuestador2;PC01
+opcion_3;;Encuestador3;PC02
+opcion_4;;Encuestador4;PC03
 opcion_5;;Encuestador5;
 opcion_6;;Encuestador6;
 opcion_7;;Encuestador7;

@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import time
 import textwrap
+from ui.pd_screen import perfil_eleccion, get_nivels
+import random
 
 #----------------------------------
 # Load Questions Information
@@ -93,6 +95,12 @@ def generate_question_widget(question_col_list, key_widget: str):
             max_value=max_value,
             key= key_widget
         )
+
+    elif question_type == "perfil_eleccion":
+        random_number = random.randint(1, 8)
+        niveles_a, niveles_b = get_nivels(random_number)
+        perfil_eleccion(niveles_a, niveles_b)
+        return {}
 
     return {question_key: response}
 
