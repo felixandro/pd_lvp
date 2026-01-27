@@ -1,13 +1,13 @@
-﻿type;title;selectbox;selectbox;selectbox;selectbox;selectbox;selectbox;number_input
-key;;modo_PR;origen;destino;proposito;frec_viaje;financiador;acompanhantes
-label;Características del Viaje;¿En modo de transporte realiza el viaje?;¿En qué comuna inicia el viaje?;¿En qué comuna termina el viaje?;¿Cuál es el Propósito del viaje?;¿Con que frecuencia hace este mismo viaje?;¿Quién financia el viaje?;Sin contar usted ¿Con cuántos acompañantes viaja?
-label2;;;;;;;;Indique 0 si viaja solo
-opcion_1;;Auto Particular;Aeropuerto;Aeropuerto;Trabajo;Al menos 1 vez a la semana;Ud. Mismo;0
-opcion_2;;Bus;Licanray;Licanray;Estudio;Al menos 1 vez al mes;Un acompañante;10
-opcion_3;;;Loncoche;Loncoche;Trámites;Entre 1 o 2 veces al año;Alguien de su grupo familiar;
-opcion_4;;;Padre las casas;Padre las casas;Compras;Casi nunca;Su empleador;
-opcion_5;;;Pucón;Pucón;Salud;Primera vez;Otro;
-opcion_6;;;Temuco;Temuco;Actividades Sociales;;;
-opcion_7;;;Villarrica;Villarrica;Vacaciones o turismo;;;
-opcion_8;;;Otra;Otra;Asuntos Personales;;;
-opcion_9;;;;;Otro;;;
+﻿type;title;selectbox;selectbox;selectbox;selectbox;selectbox;number_input
+key;;origen;destino;proposito;frec_viaje;financiador;acompanhantes
+label;Características del Viaje;¿En qué comuna inicia el viaje?;¿En qué comuna termina el viaje?;¿Cuál es el Propósito del viaje?;¿Con que frecuencia hace este mismo viaje?;¿Quién financia el viaje?;Sin contar usted ¿Con cuántos acompañantes viaja?
+label2;;;;;;;Indique 0 si viaja solo
+opcion_1;;Aeropuerto;Aeropuerto;Trabajo;Al menos 1 vez a la semana;Ud. Mismo;0
+opcion_2;;Licanray;Licanray;Estudio;Al menos 1 vez al mes;Un acompañante;10
+opcion_3;;Loncoche;Loncoche;Trámites;Entre 1 o 2 veces al año;Alguien de su grupo familiar;
+opcion_4;;Padre las casas;Padre las casas;Compras;Casi nunca;Su empleador;
+opcion_5;;Pucón;Pucón;Salud;Primera vez;Otro;
+opcion_6;;Temuco;Temuco;Actividades Sociales;;;
+opcion_7;;Villarrica;Villarrica;Vacaciones o turismo;;;
+opcion_8;;Otra;Otra;Asuntos Personales;;;
+opcion_9;;;;Otro;;;
