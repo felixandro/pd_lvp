@@ -2,10 +2,10 @@
 key;;id_encuestador;pc
 label;Encuestador y Lugar de Encuesta;Encuestador;Lugar de Encuesta
 label2;;;
-opcion_1;;Encuestador1;Terminal
-opcion_2;;Encuestador2;PC01
-opcion_3;;Encuestador3;PC02
-opcion_4;;Encuestador4;PC03
-opcion_5;;Encuestador5;
-opcion_6;;Encuestador6;
-opcion_7;;Encuestador7;
+opcion_1;;Mari cruz  Vidal ;Terminal Villarrica
+opcion_2;;Olga Castillo;Terminal Pucón
+opcion_3;;Nataly Pino;Terminal Loncoche
+opcion_4;;Yanira Chaperon;Terminal Temuco
+opcion_5;;;
+opcion_6;;;
+opcion_7;;;
