@@ -22,11 +22,11 @@ def insert_row(row_dict):
     
     # Configurar Supabase
     
-    SUPABASE_URL = "https://guhmhwcbiwaiggpcfnra.supabase.co"
-    SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1aG1od2NiaXdhaWdncGNmbnJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc4OTUxMjAsImV4cCI6MjA4MzQ3MTEyMH0.rrc1yArkDQoTGkM9ws3-jwl1fqcxBcHgAKapHzQx21s"
+    SUPABASE_URL = st.secrets["SUPABASE_URL"]
+    SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
     supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-    response = supabase.table("eod_lvp").insert(row_dict).execute()
+    response = supabase.table("pd_lvp_verano").insert(row_dict).execute()
 
 def send_to_database(responses_dict):
 
