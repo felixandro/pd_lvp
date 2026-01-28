@@ -230,15 +230,14 @@ def generate_enunciado_pd(responses):
     origen = origen if origen != "Aeropuerto" else "el Aeropuerto"
     destino = destino if destino != "Aeropuerto" else "el Aeropuerto"
 
-
     enunciado = f"""
     <div style="
         font-size: 20px;
         margin-bottom: 1rem;
         text-align: center;
     ">
-        Supón que debes viajar <span style="color: #000000; font-weight: bold;"> solo </span> (sin acompañantes) desde <span style="color: #000000; font-weight: bold;">{origen}</span> hasta <span style="color: #000000; font-weight: bold;">{destino}</span>
-        por motivos de <span style="color: #000000; font-weight: bold;">{proposito}</span> y que será financiado por ti mismo.
+        Suponga que viajará <span style="color: #000000; font-weight: bold;"> solo </span> (sin acompañantes) desde <span style="color: #000000; font-weight: bold;">{origen}</span> hasta <span style="color: #000000; font-weight: bold;">{destino}</span>
+        por motivos de <span style="color: #000000; font-weight: bold;">{proposito}</span> y que <span style="color: #000000; font-weight: bold;">usted financiará</span> los gastos de desplazamiento.
     </div>
     """
     enunciado2 = f"""
@@ -247,7 +246,7 @@ def generate_enunciado_pd(responses):
         margin-bottom: 1rem;
         text-align: center;
     ">
-        Si tus alternativas disponibles fueran las siguientes ¿Cuál elegirías para realizar el viaje?
+        Si sus alternativas disponibles fueran las siguientes ¿Cuál elegiría usted para realizar el viaje?
     </div>
     """
 
@@ -257,7 +256,7 @@ def generate_enunciado_pd(responses):
 def generate_pd_screen(id_pd_card, count_pd):
     
     #st.title(f"PD {id_pd_card}")
-    st.title(f"Pregunta {count_pd}")
+    st.title(f"Escenario {count_pd}")
 
     generate_enunciado_pd(st.session_state["responses"])
 
