@@ -55,7 +55,7 @@ def perfil_eleccion(niveles_a, niveles_b):
     font_size_cells = "16px"
 
     # Datos
-    index = ["Costo", "Minutos de Viaje", "Minutos de Acceso", "Frecuencia"]
+    index = ["Costo", "Minutos de Viaje", "Minutos de Acceso/Egreso", "Frecuencia"]
 
     # Estilo CSS
     estilo_tabla = f"""
