@@ -44,6 +44,17 @@ def identify_mode(responses_dict):
     else: 
         return "Auto Particular"
 
+def identify_mode_2(responses_dict):
+    lugar = responses_dict["screen1"]["pc"]
+    if lugar.startswith("Terminal"):
+        servicio_bus = responses_dict["screen52"]["asiento"]
+        if servicio_bus == "Asiento Clásico o Semi-Cama":
+            return "Bus"
+        elif servicio_bus == "Salón Cama o Premium":
+            return "Bus P"
+    else: 
+        return "Auto Particular"
+
 def uniform_comuna(comuna):
 
     if comuna == "Licanray":
@@ -75,7 +86,7 @@ def get_id_disenho(disenhos_df, modo, origen, destino):
 
 def identify_nro_disenho(disenhos_df, responses_dict):
     
-    modo = identify_mode(responses_dict)
+    modo = identify_mode_2(responses_dict)
     origen = uniform_comuna(responses_dict["screen3"]["origen"])
     destino = uniform_comuna(responses_dict["screen3"]["destino"])
 
