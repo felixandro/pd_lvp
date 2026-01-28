@@ -246,7 +246,7 @@ def generate_enunciado_pd(responses):
         margin-bottom: 1rem;
         text-align: center;
     ">
-        Si sus alternativas disponibles fueran las siguientes ¿Cuál elegiría usted para realizar el viaje?
+        Si sus alternativas disponibles fueran las siguientes <span style="color: #000000; font-weight: bold;"> ¿Cuál elegiría para realizar el viaje? </span> 
     </div>
     """
 
