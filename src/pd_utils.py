@@ -52,10 +52,56 @@ def get_nearest_multiple(x1, x2):
 ### Función para identificar Nro Diseño
 ### ------------------------------------------
 
+def identify_mode(lugar):
+    if lugar.startswith("Terminal"):
+        return "Bus"
+    else: 
+        return "Auto Particular"
+
+def uniform_comuna(comuna):
+
+    if comuna == "Licanray":
+        return "Pucón"
+    
+    elif comuna == "Padre las casas":
+        return "Temuco"
+    
+    else: 
+        return comuna
+
+def cargar_id_disenhos_df():
+    id_disenhos_df = pd.read_csv("data/disenhos.csv", sep=";")
+    id_disenhos_df.set_index("DIS", inplace=True)
+    return id_disenhos_df
+
+def get_id_disenho(id_disenhos_df, modo, origen, destino):
+    filtro = ((id_disenhos_df["Origen"] == origen) &
+              (id_disenhos_df["Destino"] == destino) &
+                (id_disenhos_df["Modo"] == modo))
+    disenhos_filtrados = id_disenhos_df[filtro]
+
+    assert len(disenhos_filtrados) <= 1, "Error: Más de un diseño coincide con los criterios especificados."
+
+    if len(disenhos_filtrados) == 0:
+        return 0
+    
+    return disenhos_filtrados.index[0]
+
 def identify_nro_disenho(responses_dict):
 
-    pass
+    lugar = responses_dict["screen1"]["lugar_encuesta"]
+    modo = identify_mode(lugar)
+    origen = uniform_comuna(responses_dict["screen3"]["origen"])
+    destino = uniform_comuna(responses_dict["screen3"]["destino"])
 
+    id_disenhos_df = cargar_id_disenhos_df()
+
+    id_disenho_od = get_id_disenho(id_disenhos_df, modo, origen, destino)
+    id_disenho_do = get_id_disenho(id_disenhos_df, modo, destino, origen)
+
+    id_disenho = id_disenho_od + id_disenho_do
+
+    return id_disenho
 
 ### ------------------------------------------
 ### Función para generar diseño experimental PD
