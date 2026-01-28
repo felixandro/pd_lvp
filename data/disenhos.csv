@@ -1,13 +1,13 @@
-﻿DIS;Origen;Destino;Modo;c_ref;tv_ref;f_ref;ta_ref;c_0;c_1;c_2;tv_0;tv_1;f_1;f_2;ta_1;ta_2;
-1;Temuco;Villarrica;Auto; $11,000 ;60;0;0; $-1,000 ; $-2,000 ; $-4,000 ;10;20;2;6;10;20;ok
-2;Temuco;Villarrica;Bus; $8,000 ;90;0;15; $- ; $2,000 ; $4,000 ;-10;-20;2;6;-5;5;ok
-3;Temuco;Villarrica;BusP; $8,000 ;90;0;15; $- ; $2,000 ; $4,000 ;-10;-20;2;6;-5;5;ok, revisar Premium
-4;Aeropuerto;Villarrica;Auto; $6,000 ;45;0;0; $-1,000 ; $-2,000 ; $-3,000 ;10;20;2;6;0;0;ok
-5;Loncoche;Villarrica;Auto; $5,000 ;35;0;0; $-1,000 ; $-1,500 ; $-2,000 ;10;15;2;6;0;0;ok
-6;Loncoche;Villarrica;Bus; $3,000 ;50;0;0; $- ; $1,000 ; $2,000 ;-5;-10;2;6;0;0;ok
-7;Temuco;Pucón;Auto; $13,000 ;100;0;0; $-1,000 ; $-2,500 ; $-5,000 ;10;20;2;6;10;20;ok
-8;Temuco;Pucón;Bus; $8,000 ;125;0;15; $1,000 ; $2,500 ; $5,000 ;-10;-20;2;6;-5;5;ok
-9;Temuco;Pucón;BusP; $8,000 ;125;0;15; $1,000 ; $2,500 ; $5,000 ;-10;-20;2;6;-5;5;ok, revisar Premium
-10;Aeropuerto;Pucón;Auto; $8,000 ;75;0;0; $-1,000 ; $-2,000 ; $-3,000 ;10;20;2;6;0;0;ok
-11;Loncoche;Pucón;Auto; $6,000 ;60;0;0; $-1,000 ; $-1,500 ; $-2,000 ;10;15;2;6;0;0;ok
-12;Loncoche;Pucón;Bus; $4,000 ;80;0;0; $- ; $1,000 ; $2,000 ;-5;-10;2;6;0;0;ok
+﻿DIS;Origen;Destino;Modo;c_ref;tv_ref;f_ref;ta_ref;c_0;c_1;c_2;tv_0;tv_1;f_0;f_1;ta_0;ta_1;Obs
+1;Temuco;Villarrica;Auto;11000;60;0;0;-1000;-2000;-4000;10;20;2;6;10;20;ok
+2;Temuco;Villarrica;Bus;8000;90;0;15;0;2000;4000;-10;-20;2;6;-5;5;ok
+3;Temuco;Villarrica;Bus P;8000;90;0;15;0;2000;4000;-10;-20;2;6;-5;5;ok, Servicio Premium
+4;Aeropuerto;Villarrica;Auto;6000;45;0;0;-1000;-2000;-3000;10;20;2;6;0;0;ok
+5;Loncoche;Villarrica;Auto;5000;35;0;0;-1000;-1500;-2000;10;15;2;6;0;0;ok
+6;Loncoche;Villarrica;Bus;3000;50;0;10;0;1000;2000;-5;-10;2;6;0;0;ok
+7;Temuco;Pucón;Auto;13000;100;0;0;-1000;-2500;-5000;10;20;2;6;10;20;ok
+8;Temuco;Pucón;Bus;8000;125;0;15;1000;2500;5000;-10;-20;2;6;-5;5;ok
+9;Temuco;Pucón;Bus P;8000;125;0;15;1000;2500;5000;-10;-20;2;6;-5;5;ok, Servicio Premium
+10;Aeropuerto;Pucón;Auto;8000;75;0;0;-1000;-2000;-3000;10;20;2;6;0;0;ok
+11;Loncoche;Pucón;Auto;6000;60;0;0;-1000;-1500;-2000;10;15;2;6;0;0;ok
+12;Loncoche;Pucón;Bus;4000;80;0;10;0;1000;2000;-5;-10;2;6;0;0;ok

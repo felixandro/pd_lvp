@@ -2,7 +2,7 @@ import streamlit as st
 
 from src.time_utils import process_time_list, record_datetime
 from src.database import send_to_database
-from src.pd_utils import generate_choice_set_df, compute_differences
+from src.pd_utils import generate_choice_set_df, identify_mode, validate_par_od
 import random
 
 import ui.general_screen as gs
@@ -60,7 +60,10 @@ if "screen6_completed" not in st.session_state:
 # Order PD Choice Sets: Orden Tarjetas PD
 if "order_pd_choice_sets" not in st.session_state:
     st.session_state["order_pd_choice_sets"] = random.sample(range(1, 9), 8)
-    st.session_state["count_pd"] = 0
+
+# Nro Diseño Identificado
+if "nro_disenho_identificado" not in st.session_state:
+    st.session_state["nro_disenho_identificado"] = 99
 
 # Screen5: Categoría de Usuario
 if "screen15_completed" not in st.session_state:
@@ -111,7 +114,10 @@ if st.session_state["screen2_completed"] and not st.session_state["screen3_compl
 
 if st.session_state["screen3_completed"] and not st.session_state["od_screen_completed"]:
 
-    od.generate_od_screen()
+    valid_od = validate_par_od(st.session_state["responses"])
+
+    if valid_od:
+        od.generate_od_screen()
 
 # --------------------------------------------------
 # Screen 5x // Conditional General Screen // Niveles de Servicio Modo PR
@@ -125,11 +131,7 @@ screen_5x_completed = any([
 
 if st.session_state["od_screen_completed"] and not screen_5x_completed:
 
-    if "choice_set_df" not in st.session_state:
-        st.session_state["choice_set_df"] = generate_choice_set_df(nro_disenho=1)
-        #st.session_state["choice_set_df_differences"] = compute_differences(st.session_state["choice_set_df"])
-
-
+    st.session_state["responses"]["screen3"]["modo_PR"] = identify_mode(st.session_state["responses"])
     modo_PR = st.session_state["responses"]["screen3"].get("modo_PR", False)
 
     if modo_PR == "Auto Particular":
@@ -145,7 +147,13 @@ if st.session_state["od_screen_completed"] and not screen_5x_completed:
 
 if screen_5x_completed and not st.session_state["screen6_completed"]:
 
+    if "choice_set_df" not in st.session_state:
+        st.session_state["choice_set_df"] = generate_choice_set_df(st.session_state["responses"])
+        #st.session_state["choice_set_df_differences"] = compute_differences(st.session_state["choice_set_df"])
+
     gs.generate_general_screen(id_screen=6)
+
+    #st.write(st.session_state["choice_set_df"])
 
 # --------------------------------------------------
 # Screen 7 .. 14 // PD Screen // Perfiles de Elección PDs
@@ -155,8 +163,7 @@ if st.session_state["screen6_completed"] and len(st.session_state["order_pd_choi
     
     pds.initialize_pd_responses()
 
-    st.session_state["count_pd"] += 1
-    count_pd = st.session_state["count_pd"]
+    count_pd = 9 - len(st.session_state["order_pd_choice_sets"])
     pds.generate_pd_screen(st.session_state["order_pd_choice_sets"][0], count_pd)
 
 # --------------------------------------------------
@@ -164,7 +171,6 @@ if st.session_state["screen6_completed"] and len(st.session_state["order_pd_choi
 # --------------------------------------------------
 
 if len(st.session_state["order_pd_choice_sets"]) == 0 and not st.session_state["screen15_completed"]:
-
     gs.generate_general_screen(id_screen=15)
 
 # --------------------------------------------------
@@ -183,7 +189,7 @@ if st.session_state["screen15_completed"]:
 
 st.divider()
 
-st.write(st.session_state["responses"])
+#st.write(st.session_state["responses"])
 
 #if "choice_set_df" in st.session_state:
 #        st.write(st.session_state["choice_set_df"])
