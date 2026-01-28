@@ -1,6 +1,6 @@
 ﻿type;title;text;text;perfil_eleccion;text;text;text
 key;;parrafo1;parrafo2;;parrafo3;parrafo4;parrafo5
-label;Introducción PD;Para las siguientes preguntas suponga que realizará un viaje solo (sin acompañantes) con el mismo origen, destino y propósito al que está realizando en este momento.;Le presentaremos un escenario hipotético conformado por dos alternativas mediante las cuales podría efectuar su viaje y que serán presentadas a través de un cuadro del siguiente estilo:;;Su tarea es comparar ambas opciones y seleccionar aquella que eventualmente utilizaría. ;Analice detenidamente el escenario antes de elegir, con tal de que su decisión refleje fielmente sus preferencias personales;Por último, la encuesta es totalmente anónima y no hay respuestas correctas o incorrectas.
+label;Introducción PD;Para las siguientes preguntas suponga que realizará un viaje solo (sin acompañantes) con el mismo origen, destino y propósito al que está realizando en este momento.;Le presentaremos 8 escenarios hipotéticos conformados por dos alternativas con las que podría efectuar su viaje, las cuales se mostrarán a través de un cuadro del siguiente estilo:;;Su tarea es comparar ambas opciones y seleccionar aquella que eventualmente utilizaría. ;Analice detenidamente el escenario antes de elegir, con tal de que su decisión refleje fielmente sus preferencias personales;Por último, la encuesta es totalmente anónima y no hay respuestas correctas o incorrectas.
 label2;;;;;;;
 opcion_1;;;;;;;
 opcion_2;;;;;;;
