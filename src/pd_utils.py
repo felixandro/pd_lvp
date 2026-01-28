@@ -86,6 +86,19 @@ def get_id_disenho(disenhos_df, modo, origen, destino):
 
 def identify_nro_disenho(disenhos_df, responses_dict):
     
+    modo = identify_mode(responses_dict)
+    origen = uniform_comuna(responses_dict["screen3"]["origen"])
+    destino = uniform_comuna(responses_dict["screen3"]["destino"])
+
+    id_disenho_od = get_id_disenho(disenhos_df, modo, origen, destino)
+    id_disenho_do = get_id_disenho(disenhos_df, modo, destino, origen)
+
+    id_disenho = id_disenho_od + id_disenho_do
+
+    return id_disenho
+
+def identify_nro_disenho_2(disenhos_df, responses_dict):
+    
     modo = identify_mode_2(responses_dict)
     origen = uniform_comuna(responses_dict["screen3"]["origen"])
     destino = uniform_comuna(responses_dict["screen3"]["destino"])
@@ -245,7 +258,7 @@ def generate_choice_set_df(responses):
 
     df = cargar_disenhos_df()
 
-    nro_disenho = identify_nro_disenho(df, responses)
+    nro_disenho = identify_nro_disenho_2(df, responses)
 
     dis_column_df = generate_dis_column_df(nro_disenho)
     default_current_mode_df = get_default_current_mode(nro_disenho, df)
