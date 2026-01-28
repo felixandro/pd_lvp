@@ -7,7 +7,9 @@ from streamlit_folium import st_folium
 
 def get_surveyor_location():
 
-    st.subheader("Ubicación del Encuestador")
+    st.subheader("Presiona el siguiente botón para compartir tu ubicación")
+
+    st.write("Permite compartir tu ubicación cuando el navegador lo solicite.")
 
     location = streamlit_geolocation()
 
