@@ -27,9 +27,9 @@ def insert_row(row_dict):
     supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
     # LOG: Imprimir todos los valores para identificar el problema
-    st.write("### DEBUG: Valores a insertar en la BBDD:")
+    print("### DEBUG: Valores a insertar en la BBDD:")
     for key, value in row_dict.items():
-        st.write(f"**{key}**: {value} (tipo: {type(value).__name__})")
+        print(f"**{key}**: {value} (tipo: {type(value).__name__})")
     
     response = supabase.table("pd_lvp_verano").insert(row_dict).execute()
 
