@@ -18,7 +18,7 @@ def get_surveyor_location():
     if location["latitude"] and location["longitude"]:
         surveyor_location = {"surveyor_lat": location["latitude"], 
                              "surveyor_lon": location["longitude"],
-                             "surveyor_acc": location["accuracy"]}
+                             "surveyor_acc": int(location["accuracy"])}
         return surveyor_location
     
     else:
