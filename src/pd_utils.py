@@ -42,7 +42,7 @@ def identify_mode(responses_dict):
     if lugar.startswith("Terminal"):
         return "Bus"
     else: 
-        return "Auto Particular"
+        return "Auto"
 
 def identify_mode_2(responses_dict):
     lugar = responses_dict["screen1"]["pc"]
@@ -53,16 +53,19 @@ def identify_mode_2(responses_dict):
         elif servicio_bus == "Salón Cama o Premium":
             return "Bus P"
     else: 
-        return "Auto Particular"
+        return "Auto"
 
 def uniform_comuna(comuna):
 
-    if comuna == "Licanray":
+    if comuna == "Licanray" or comuna == "Caburgua":
         return "Pucón"
     
-    elif comuna == "Padre las casas":
+    elif comuna == "Padre las casas" :
         return "Temuco"
     
+    elif comuna == "Gorbea" or comuna == "Freire" or comuna == "Pitrufquén":
+        return "Aeropuerto"
+        
     else: 
         return comuna
 

@@ -1,0 +1,5 @@
+.streamlit/
+app_pd_env/
+start_app.bat
+src/__pycache__/
+ui/__pycache__/
