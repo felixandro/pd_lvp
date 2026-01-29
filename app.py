@@ -134,7 +134,7 @@ if st.session_state["od_screen_completed"] and not screen_5x_completed:
     st.session_state["responses"]["screen3"]["modo_PR"] = identify_mode(st.session_state["responses"])
     modo_PR = st.session_state["responses"]["screen3"].get("modo_PR", False)
 
-    if modo_PR == "Auto Particular":
+    if modo_PR == "Auto":
         gs.generate_general_screen(id_screen=51)
 
     elif modo_PR == "Bus":
