@@ -1,5 +1,14 @@
 import streamlit as st
 
+# --------------------------------------------------
+# Configuración general de la app
+# --------------------------------------------------
+st.set_page_config(
+    page_title = "PD",
+    layout="centered",
+    initial_sidebar_state="auto"
+)
+
 from src.time_utils import process_time_list, record_datetime
 from src.database import send_to_database
 from src.pd_utils import generate_choice_set_df, identify_mode, validate_par_od
@@ -10,14 +19,6 @@ import ui.od_screen as od
 import ui.pd_screen as pds
 import ui.restart_screen as rs
 
-# --------------------------------------------------
-# Configuración general de la app
-# --------------------------------------------------
-st.set_page_config(
-    page_title = "PD",
-    layout="centered",
-    initial_sidebar_state="auto"
-)
 
 # --------------------------------------------------
 # Variables de Estado
