@@ -1,6 +1,15 @@
 from supabase import create_client
 import streamlit as st
 
+@st.cache_resource
+def init_supabase():
+    return create_client(
+        st.secrets["SUPABASE_URL"],
+        st.secrets["SUPABASE_KEY"]
+    )
+
+supabase = init_supabase()
+
 def process_responses_dict(responses_dict):
     
     output_dict = {}
@@ -19,18 +28,7 @@ def set_lowercase_keys(input_dict):
     return {k.lower(): v for k, v in input_dict.items()}
 
 def insert_row(row_dict):
-    
-    # Configurar Supabase
-    
-    SUPABASE_URL = st.secrets["SUPABASE_URL"]
-    SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
-    supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
-
-    # LOG: Imprimir todos los valores para identificar el problema
-    print("### DEBUG: Valores a insertar en la BBDD:")
-    for key, value in row_dict.items():
-        print(f"**{key}**: {value} (tipo: {type(value).__name__})")
-    
+ 
     response = supabase.table("pd_lvp_verano").insert(row_dict).execute()
 
 def send_to_database(responses_dict):
